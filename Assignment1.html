@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Assignment1</title>
+    </head>
+    <body>
+        <script>
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];       
+  var d = new Date();
+  var n = d.getDay()
+  var s=days[n];
+  document.write("Today is:"+s+".");      
+var H=d.getHours();
+var hours = d.getHours() % 12 || 12; 
+if(H>12)
+        {
+            document.write("<br>"+"Current Time is :" +hours+"PM"+":" + d.getMinutes() + ":" + d.getSeconds());  
+        }
+        else
+        {
+            document.write("<br>"+"Current Time is :" +hours +"AM"+":" + d.getMinutes() + ":" + d.getSeconds());
+        }
+        </script>
+    </body>
+</html>
