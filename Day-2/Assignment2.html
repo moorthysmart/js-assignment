@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     /*   <---!   String Methods...---!> */
+/* 
+If a parameter is negative, the position is counted from the end of the string.
+This example slices out a portion of a string from position -12 to position -6
+*/
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(-4);
+document.write(res);  //it prints the values of kiwi
+
+ /*   <---!   Search methods...---!>
+  
+  
+  The search() method returns the position of the first occurrence of a specified text in a string
+   */
+   var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+document.write(pos);  //it prints the values of 7 for the locate letter starting point values
+
+// trim methods removed whitespace
+var str = "     Hello World!     ";
+document.write(str.trim()); //it prints the values of helloworld....
+
+
+
+
+
+/*   <---!  JavaScript Array Methods...---!> */
+
+//The JavaScript method toString() converts an array to a string of array values
+
+var fruits = ["strawberry", "pineapple", "Apple", "Mango"];
+document.write(fruits.toString());  //strawberry pineapple Apple Mango
+
+
+
+
+    </script>
+</body>
+</html>
