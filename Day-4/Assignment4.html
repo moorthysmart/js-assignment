@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body>
+    <script>
+        
+        let c=+prompt("Enter the no :/n 1.addition 2.subtraction 3.multiplication 4.division 5.squareroot 6.percentage");
+        switch (c) {
+            case 1:
+            {let a =Number(prompt("What is your first value"));
+                  let b =Number(prompt("What is your second value"));
+                  let result=a+b;
+                  console.log("your addition value is "+result);
+            }
+                break;
+                case 2:{let a =Number(prompt("What is your first value"));
+                       let b =Number(prompt("What is your second value"));
+                       let result=a-b;
+                       console.log("your subtraction value is "+result);
+                }
+                break;
+                case 3:{let a =Number(prompt("What is your first value"));
+                       let b =Number(prompt("What is your second value"));   
+                      let result=a*b;
+                      console.log("your Multiplication value is "+result);
+                }
+                break;
+                case 4:{let a =Number(prompt("What is your first value"));
+                       let b =Number(prompt("What is your second value"));
+                      let result=a/b;
+                      console.log("your division value is "+result);
+                }
+                break;
+                case 5:{let a =Number(prompt("What is your squareroot value"));
+                       
+                       let result=Math.sqrt(a);
+                        console.log("your squareroot value is "+result);
+                }
+                break;
+                case 6:{let a =Number(prompt("What is your first value"));
+                       let b =Number(prompt("What is your second value"));
+                       let result=a%b;
+                       console.log("your addition value is "+result);
+                }
+                break;
+                
+        
+            default:console.log("you enter the correct number or plz reload the page again");
+                break;
+        }
+    </script>
+</body>
+</html>
