@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+</head>
+<body>
+    <script>
+class User {
+    constructor(name, age,email) {
+      this.name = name;
+      this.age = age;
+      this.email = email;
+     
+    }
+
+    login(){
+        console.log(`${this.name} has logged in`);
+        return this;
+    }
+    logout(){
+        console.log(`${this.name} has logged out`);
+        return this;
+    }
+    
+   
+
+}
+
+class Moderator extends User
+{
+    constructor(name,age,email){
+        super(name,age,email);
+        this.luCoins = 0;
+    }
+    addCoins(){
+        this.luCoins++;
+        console.log(`${this.name} has ${this.luCoins} coins`);
+        return this;
+    }
+    removeCoins(){
+        this.luCoins--;
+        console.log(`${this.name} has ${this.luCoins} coins`);
+        return this;
+    }
+
+   
+
+}
+
+class Admin extends Moderator{
+    
+    
+    constructor(name,age,email){
+        super(name,age,email);
+        this.courses = [];   
+    }
+   addCourse(Admin,course){
+       this.courses.push(course);
+       console.log(this.courses);
+   }
+   deleteCourse(Admin,course){
+       this.courses.pop(course);
+       console.log(this.courses);
+   }
+   
+   
+   
+}
+
+
+
+let user1 = new User('Moorthy',23,'Moorthy1778@gmail.com');
+let moder=new Moderator('Moorthy',23,'Moorthy1778@gmail.com');
+let admin=new Admin('Moorthy',23,'Moorthy1778@gmail.com');
+
+user1.login();
+moder.addCoins().addCoins().addCoins().removeCoins();
+
+admin.addCourse(user1,'Javascript');
+admin.addCourse(user1,'Python');
+admin.deleteCourse(user1,'Python');
+user1.logout();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+</head>
+<body>
+    <script>
+     var arr = [];
+     var n=+prompt("How much numbers you want  to insert in array");
+
+for(var i = 1;i<=n;i++)                                                           
+{   
+    
+    var z =+ prompt("NUmbers are:");  
+    if(z>=1){
+        arr.push(z);        
+    } 
+    else{
+        console.log("Enter the positive numbers reload the page again/n");
+    }
+                         
+
+} 
+console.log(arr);
+let odd = arr.filter(el=>el%2==1);
+
+let arraycubes = arr.filter(el=>el%2==1).map(el=>el**3);
+
+console.log("The odd numbers are : "+odd);
+console.log("the array cubes numers are: "+arraycubes); 
+    </script>
+</body>
+</html>
