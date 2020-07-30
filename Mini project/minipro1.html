@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <h2>My To do List</h2>
+
+    <form action="" id="myForm">
+        <input type="text" id="todo">
+        <button type="button" id="btn">Add Item</button>
+        <button type="button" id="rbtn">Remove Item</button>
+        <button type="button" id="sbtn">Store Item</button>
+    </form>
+
+    <ol id="list">
+
+    </ol>
+    <ol id="list1" >
+     <h1>Storing Data:</h1>
+    
+     <script >
+           const button2 = document.querySelector('#sbtn');
+           const list1 = document.querySelector('#list1');
+
+button2.onclick = function(){
+    let item = document.querySelector("#todo").value;
+    console.log(item, typeof(item));
+    let text2 = document.createTextNode(item);
+    console.log(text2); 
+    let listItem = document.createElement('li');
+    listItem.appendChild(text2);
+    list1.appendChild(listItem);
+    document.forms.myForm.reset();      
+         if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("lastname",item);
+            // Retrieve
+            document.getElementById("list1").innerHTML = localStorage.getItem("lastname");
+            } else {
+            document.getElementById("list1").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+        }
+     </script>
+    </ol>
+
+    <script src="index.js"></script>
+</body>
+</html>
